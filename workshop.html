@@ -9,52 +9,60 @@
 <body>
     <header>
         <div class="wrapper">
-        <div id="logo"><span>SIT </span><span>ON </span> <span>CHAIR</span></div>
+        <div id="logo"><span>SIT  </span><span>ON  </span> <span>CHAIR</span></div>
         <div id="navbar">
             <ul>
                 <li><a>O FIRMIE</a>
                     <ul class="dropdown-menu">
-                    <li class="dropdown-item">AKTUALNOŚCI</li>
-                    <li class="dropdown-item">NASZ TEAM</li>
-                    <li class="dropdown-item">HISTORIA</li>
+                    <div class="arrow"></div>
+                    <li class="dropdown-item">Aktualności</li>
+                    <li class="dropdown-item">Nasz team</li>
+                    <li class="dropdown-item">Historia</li>
                     </ul>
                 </li>
-                <li><a>GALERIA</a></li>
-                <li><a>KONTAKT</a></li>
+                <li><a href="#pictures">GALERIA</a></li>
+                <li><a href="#form">KONTAKT</a></li>
             </ul>
         </div>
         </div>
     </header>
    
-    <section id="description" class="wrapper">
-        <span>SIT </span><span>ON </span><span>OUR </span><span>CHAIR</span>
-        <article>
-            <div class="back"></div>
+    <section id="description">
+        <div class="presentation wrapper">
+            <div class="black-chair"></div>
+            <div class="slogan">
+                <span>SIT </span><span>ON </span><span>OUR </span><span>CHAIR</span>
+            </div>
+            <div class="back">&lt;</div>
             <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto nostrum illum dolor quo veniam qui iusto eum id possimus corporis! Delectus obcaecati qui maiores. Sequi omnis maiores non quo molestias.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto nostrum illum dolor    quo veniam qui iusto eum id possimus corporis! Delectus obcaecati qui maiores. Sequi omnis     maiores non quo molestias.
             </p>
-            <div class="next"></div>
-        </article>
+            <button class="more">Zobacz więcej</button>
+            <div class="next">&gt;</div>
+        </div>    
     </section>
 
     <section id="pictures" class="wrapper">
-        <div id="expo">
-            <span>Chair CLAIRE</span>
+        <div class="expo claire">
+            <h3><span>Chair CLAIRE</span></h3>
         </div>
-        <div id="expo">
-            <span>Chair MARGARITA</span>
+        <div class="expo margarita">
+            <h3><span>Chair MARGARITA</span></h3>
         </div>
-        <div id="all_inputs">
-            <span>Finds all inputs</span>
-            <p>Finds all inputs that are not checked and highlits the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked. <br> Notice there is no change when clicking the checkboxes since no click events have been linked.</p>
+        <div class="all_inputs">
+            <h3>Finds all inputs</h3>
+            <p>Finds all inputs that are not checked and highlits the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked. <br> <br>Notice there is no change when clicking the checkboxes since no click events have been linked.</p>
         </div>
     </section>
 
-    <section id="prices" class="wrapper">
-        <h1><p>CENNIK</p></h1>
-        <div id="menu">
+    <section id="prices">
+        <h1>CENNIK</h1>     
+        <div id="menu" class="wrapper">
             <div class="basic">
-                <div class="price"></div>
+                <h3>BASIC PLAN</h3>
+                <div class="price"><p>85<sup>99</sup></p>
+                    <br><span>PLN / MSC</span>
+                </div>
                 <ul>
                     <li>Zakup towaru + dowóz</li>
                     <li>Serwis</li>
@@ -62,7 +70,10 @@
                 </ul>
             </div>
             <div class="standard">
-                <div class="price"></div>
+                <h3>STANDARD PLAN</h3>
+                <div class="price"><p>95<sup>99</sup></p>
+                    <br><span>PLN / MSC</span>
+                </div>
                 <ul>
                     <li>Zakup towaru + dowóz</li>
                     <li>Serwis</li>
@@ -70,8 +81,11 @@
                     <button class="join">Dołącz</button>
                 </ul>
             </div>
-            <div class="advance">
-                <div class="price"></div>
+            <div class="extended">
+                <h3>ADVANCE PLAN</h3>
+                <div class="price"><p>211<sup>00</sup></p>
+                    <br><span>PLN / MSC </span>
+                </div>
                 <ul>
                     <li>Zakup towaru + dowóz</li>
                     <li>Serwis</li>
@@ -84,36 +98,44 @@
     </section>
 
     <section id="form" class="wrapper">
-        <h1><p>KONTAKT</p></h1>
-        <form>
-            <label>
-                <input type="text" name="username" placeholder="Imię">
-            </label>
-            <label>
-                <input type="email" name="email" placeholder="email">
-            </label>
-            <label>
-                <input type="email" name="email" placeholder="email">
-            </label>
-            <label>
-                <textarea placeholder="Wiadomość"></textarea>
-            </label>
-            <label>
-                <input type="checkbox" name="agreement" checked>
-                Zgadzam się na przetwarzanie danych osobowych.
-            </label>
-            <button type="submit">Wyślij</button>
+        <h1>KONTAKT</h1>
+        <form class="text-images-wrapper">
+            <div class="textfield">
+                <label>
+                    <input type="text" name="username"  placeholder="Imię">
+                </label>
+                <label>
+                    <input type="email" name="email"    placeholder="email">
+                </label>
+
+                <label>
+                    <textarea placeholder="Wiadomość"></textarea>
+                </label>
+            </div>
+            <div class="images">
+                <div class="red"></div>
+                <label class="checkbox-wrapper"><div class="check-img"></div><p>Zgadzam się na przetwarzanie danych   osobowych.</p>
+                    <input type="checkbox" name="agreement"     checked="checked">
+                </label>
+                <button type="submit" value="Wyślij">Wyślij</button>
+            </div>
         </form>
-       
     </section>
     
     <footer>
         <div class="wrapper">
-        <p>Copyright 2014 | All rights reserved. - Sit On Chair</p>
+        <p>Copyright 2014   |   All rights reserved. - Sit On Chair</p>
         <div class="social-media">
-            <span class="icons"></span>
-            <span>SIT </span><span>ON </span> <span>CHAIR</span>
-        </div>
+            <div class="icons">
+                <a href="http://www.flickr.com"><img src="./images/flickr.png" class="flickr"></a>
+                <a href="http://www.vimeo.com"><img src="./images/vimeo.png" class="vimeo"></a>
+                <a href="http://www.pinterest.com"><img src="./images/pinterest.png" class="pinterest"></a>
+                <a href="http://www.twitter.com"><img src="./images/twitter.png" class="twitter"></a>
+            </div>
+            <div class="logo-bottom">
+                <span>SIT </span><span>ON </span> <span>CHAIR</span>
+            </div>
+            </div>
         </div>
     </footer>
 </body>
