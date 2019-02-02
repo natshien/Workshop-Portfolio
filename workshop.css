@@ -16,6 +16,8 @@ section {
     padding-right: 50px;
 }
 
+
+
 /* ------------------- HEAD ------------------- */
 
 header {
@@ -27,7 +29,6 @@ header {
     font-size: 15px;
     padding-top: 15px;
     height: 50px;
-   
     
 }
 
@@ -64,12 +65,11 @@ header .wrapper {
     z-index: 1;
     background-color: black;
     color: #FFF;
-    display: flex;
+    display: none;
     flex-flow: column;
     height: 95px;
     font-weight: 400;
     padding: 5px 0;
-    /* height ? */
 }
 
  /*  Strzałka do dropdown menu  */
@@ -83,7 +83,6 @@ header .wrapper {
     position: absolute;
     top: -24px;
     left: 47px;
-
 }
 
 /* ----------------------------- SECTION 1 ----------------------------- */
@@ -91,6 +90,8 @@ header .wrapper {
 #description {
     width: 100%;
     height: 500px;
+    display: flex;
+    flex-direction: row;
     
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefefe+19,d1d1d1+90,d1d1d1+96,d1d1d1+99,d1d1d1+100,d1d1d1+100,d1d1d1+100,d1d1d1+100,d1d1d1+100,d1d1d1+100,d1d1d1+101,d1d1d1+102,d1d1d1+102 */
 background: #fefefe; /* Old browsers */
@@ -100,28 +101,33 @@ background: linear-gradient(to bottom, #fefefe 19%,#d1d1d1 90%,#d1d1d1 96%,#d1d1
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#d1d1d1',GradientType=0 ); /* IE6-9 */
     display: flex;
     flex-direction: row;
-    position: relative;
-
 }
 
-#description .black-chair {
-    width: 575px;
-    height: 475px;
-    background-image: url(./images/black_chair.png);
-    display: inline-block;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 70px -620px;
+.presentation-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    max-width: 100%;
+    height: 600px;
+}
 
+
+#descrition .presentation-wrapper > .about {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
 }
 
 #description .slogan {
-    position: absolute;
-    top: 150px;
-    left: 640px;
+    display: flex;
+    flex-direction: row;
     font-size: 20px;
     font-weight: bolder;
-    
+    margin-top: 130px;
 }
 
 #description .slogan span {
@@ -130,6 +136,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
     font-size: 40px;
     font-weight: 700;
     color:black;
+    margin: 0 10px;
     
 }
 
@@ -141,31 +148,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 }
 
 
-#description > .presentation > {
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-align-content: center;
-width: 700px;
-height: 600px;
-}
 
-#description > .presentation > p {
+#description > .presentation-wrapper > .about > p {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 25px;
-    display: inline-block;
-    margin: 20px 0;
-    position: absolute;
-    top: 200px;
-    left: 610px;
     text-align: center;
-    width: 400px;
-
+    margin: 20px 0;
+    margin-right: 90px;
 }
 
-#description > .presentation > .more {
+#description > .presentation-wrapper > .about > .more {
     background-color: #00c9b4;
     color: #FFF;
     width: 300px;
@@ -177,30 +171,45 @@ height: 600px;
     border-radius: 10px;
     border-style: none;
     text-transform: uppercase;
-    position: absolute;
-    top: 350px;
-    left: 665px;
-    text-align: center;
+    margin: 0 auto;
+    margin-left: 60px;
 } 
 
-#description > .presentation > .back {
-    color: #00c9b4;
-    font-size: 65px;
-    font-weight: 400;
-    position: absolute;
-    top: 245px;
-    left: 75px;
-    transform: scaleY(1.4);
+.slider ul{
+    list-style: none;
 }
 
-#description > .presentation > .next {
+.slider li{
+    display: none;
+}
+
+.slider .visible {
+    display: inline-block;
+}
+
+#description .slider li img {
+    width: 650px;
+    height: 450px;
+    margin-top: 60px;
+    flex: 3;
+}
+
+#description > .presentation-wrapper .prev {
     color: #00c9b4;
     font-size: 65px;
     font-weight: 400;
-    position: absolute;
-    top: 245px;
-    right: 75px;
     transform: scaleY(1.4);
+    margin-left: 30px;
+    margin-top: 280px;
+}
+
+#description > .presentation-wrapper .next {
+    color: #00c9b4;
+    font-size: 65px;
+    font-weight: 400;
+    transform: scaleY(1.4);
+    margin-top: 280px;
+    margin-right: 30px;
 }
 
 /* =========================== SECTION 2 ============================ */
@@ -680,6 +689,7 @@ form .textfield > label > input {
 
 form .textfield > label > textarea {
     border: #72e2d7 solid 1px;
+    color:rgb(167, 167, 167);
     height: 250px;
     width: 700px;
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
@@ -707,7 +717,7 @@ form .images {
 
 form .images > .red {
     content: '';
-    background-image: url(./images/red_chair.png);
+    background-image: url("./images/red_chair.png");
     background-size: cover;
     width: 290px;
     height: 220px;
@@ -836,6 +846,7 @@ footer .wrapper {
     padding-bottom: 30px;
 }
 
-.social-media .logo-bottom span:nth-child(2) {
-    /*  większe pogrubienie ON  ??? */
+.logo-bottom > span:nth-child(2) {
+    color: rgb(145, 143, 143);
+    font-weight: 800;
 }
